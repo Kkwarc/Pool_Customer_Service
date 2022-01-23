@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PlywalniaPython", "PlywalniaPython\PlywalniaPython.pyproj", "{D880280D-D104-4A2A-A7CE-892FC773D002}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D880280D-D104-4A2A-A7CE-892FC773D002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D880280D-D104-4A2A-A7CE-892FC773D002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2346325B-3A05-418D-AE81-B8FBC47C9E5B}
+	EndGlobalSection
+EndGlobal

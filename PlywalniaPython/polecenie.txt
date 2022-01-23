@@ -1,0 +1,17 @@
+Napisz program do obs³ugi p³ywalni. 
+
+P³ywalnia ma nazwê, godziny pracy, cennik oraz okreœlon¹ liczbê torów. 
+
+S¹ dwa rodzaje klientów na p³ywalni: szkó³ki p³ywackie i klienci indywidualni. 
+Klienci mog¹ rezerwowaæ bilety na p³ywalnie na wyznaczon¹ godzinê. 
+Minimalny czas rezerwacji to jedna godzina. 
+Maksymalna liczba dostêpnych biletów jest równa piêæ razy liczba wolnych torów. 
+Szkó³ki p³ywackie mog¹ rezerwowaæ ca³y tor. 
+W jednym momencie szkó³ki p³ywackie nie mog¹ zarezerwowaæ wiêcej ni¿ 35% wszystkich torów.
+
+Program obs³uguj¹cy p³ywalnie powinien umo¿liwiaæ rezerwacjê biletów dla klientów indywidualnych 
+oraz rezerwacjê torów dla szkó³ek p³ywackich z uwzglêdnieniem dostêpnoœci i warunków opisanych powy¿ej. 
+W przypadku braku miejsc na wybrany przez klienta termin, program powinien zaproponowaæ najbli¿szy mo¿liwy termin. 
+Program ma przechowywaæ historiê rezerwacji oraz na koniec dnia tworzyæ raport finansowy, 
+pokazuj¹cy jaki jest przychód p³ywalni danego dnia. Cennik p³ywalni powinien byæ zró¿nicowany, 
+w zale¿noœci od pory dnia, dnia tygodnia oraz rodzaju klienta.

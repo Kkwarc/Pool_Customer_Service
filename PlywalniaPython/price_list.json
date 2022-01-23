@@ -1,0 +1,42 @@
+{
+  "school": {
+    "before_noon": {
+      "Mon": 40,
+      "Tue": 40,
+      "Wed": 35,
+      "Thu": 35,
+      "Fri": 42,
+      "Sat": 45,
+      "Sun": 47
+    },
+    "after_noon": {
+      "Mon": 45,
+      "Tue": 45,
+      "Wed": 40,
+      "Thu": 40,
+      "Fri": 50,
+      "Sat": 50,
+      "Sun": 55
+    }
+  },
+  "client": {
+    "before_noon": {
+      "Mon": 10,
+      "Tue": 10,
+      "Wed": 8,
+      "Thu": 8,
+      "Fri": 12,
+      "Sat": 12,
+      "Sun": 14
+    },
+    "after_noon": {
+      "Mon": 10,
+      "Tue": 10,
+      "Wed": 9,
+      "Thu": 9,
+      "Fri": 13,
+      "Sat": 12,
+      "Sun": 15
+    }
+  }
+}
