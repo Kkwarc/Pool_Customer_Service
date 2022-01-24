@@ -81,4 +81,3 @@ class Ui_MainWindow(object):
         self.menuCheck.setTitle(QCoreApplication.translate("MainWindow", u"Check", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuStartScreen.setTitle(QCoreApplication.translate("MainWindow", u"Start Screen", None))
-
