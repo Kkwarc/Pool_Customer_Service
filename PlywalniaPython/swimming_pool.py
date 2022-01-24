@@ -102,7 +102,7 @@ class SwimmingPool:
         work_hours = self.get_work_hours()
         while True:
             free_seats = self.get_free_seats(date, hour)
-            if hour >= work_hours[1]:
+            if hour > work_hours[1]:
                 hour, date = self.next_day(date)
                 self.create_history(date, hour)
                 hour, date, number_of_seats = \
@@ -143,7 +143,7 @@ class SwimmingPool:
             free_tracks = self.get_free_tracks(date, hour)
             condition, number_of_tracks = self.checking_free_tracks(
                 date, hour, number_of_tracks)
-            if hour >= work_hours[1]:
+            if hour > work_hours[1]:
                 hour, date = self.next_day(date)
                 hour, date, number_of_tracks = \
                     self.looking_for_free_tracks(

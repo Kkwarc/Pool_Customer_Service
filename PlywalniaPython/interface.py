@@ -77,7 +77,8 @@ def entering_hour(b, sp):
     """
     hour = 0
     while True:
-        hour = give_int_input('Enter hour: \n')
+        hours = sp.get_work_hours()
+        hour = give_int_input(f'Enter hour({hours[0]}-{hours[1]}): \n')
         if hour is False:
             continue
         hour = b.checking_hour(sp, hour)

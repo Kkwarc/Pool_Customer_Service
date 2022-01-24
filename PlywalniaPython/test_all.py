@@ -106,11 +106,11 @@ def test_swimming_pool_looking_next_free_seats():
 def test_swimming_pool_looking_next_free_seats_next_day():
     s = swimming_pool.SwimmingPool("name", [8, 20], price_list, 5)
     c = clients.IndividualCustomer("name")
-    s.create_history("2022-02-02", 19)
-    c.reserved(s, "2022-02-02", 19, 25, "name")
-    assert s.looking_for_free_seats("2022-02-02", 19, 5)[0] == 8
-    assert s.looking_for_free_seats("2022-02-02", 19, 5)[1] == "2022-02-03"
-    assert s.looking_for_free_seats("2022-02-02", 19, 5)[2] == 5
+    s.create_history("2022-02-02", 20)
+    c.reserved(s, "2022-02-02", 20, 25, "name")
+    assert s.looking_for_free_seats("2022-02-02", 20, 5)[0] == 8
+    assert s.looking_for_free_seats("2022-02-02", 20, 5)[1] == "2022-02-03"
+    assert s.looking_for_free_seats("2022-02-02", 20, 5)[2] == 5
 
 
 def test_swimming_pool_looking_next_free_tracks():
@@ -126,11 +126,11 @@ def test_swimming_pool_looking_next_free_tracks():
 def test_swimming_pool_looking_next_free_tracks_next_day():
     s = swimming_pool.SwimmingPool("name", [8, 20], price_list, 5)
     ss = clients.SwimmingSchool("name")
-    s.create_history("2022-02-02", 19)
-    ss.reserved(s, "2022-02-02", 19, 1, "name")
-    assert s.looking_for_free_tracks("2022-02-02", 19, 1)[0] == 8
-    assert s.looking_for_free_tracks("2022-02-02", 19, 1)[1] == "2022-02-03"
-    assert s.looking_for_free_tracks("2022-02-02", 19, 1)[2] == 1
+    s.create_history("2022-02-02", 20)
+    ss.reserved(s, "2022-02-02", 20, 1, "name")
+    assert s.looking_for_free_tracks("2022-02-02", 20, 1)[0] == 8
+    assert s.looking_for_free_tracks("2022-02-02", 20, 1)[1] == "2022-02-03"
+    assert s.looking_for_free_tracks("2022-02-02", 20, 1)[2] == 1
 
 
 def test_swimming_pool_checking_swimming_pool_condition():
