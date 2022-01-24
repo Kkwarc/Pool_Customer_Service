@@ -92,7 +92,7 @@ def accepting_new_date_client(sp, hour, date, number):
     Communication of acceptance of the new date with client.
     """
     print("No free seats on a given date")
-    hour, date, number = sp.looking_free_seats(
+    hour, date, number = sp.looking_for_free_seats(
         date, hour, number)
     print(f"Earliest next date: {date} at {hour}")
     while True:
@@ -136,7 +136,7 @@ def accepting_new_date_school(sp, hour, date, number):
     Communication of acceptance of the new date with swimming school.
     """
     print("No free tracks on a given date")
-    hour, date, number = sp.looking_free_tracks(
+    hour, date, number = sp.looking_for_free_tracks(
         date, hour, number)
     print(f"Earliest next date: {date} at {hour}")
     while True:

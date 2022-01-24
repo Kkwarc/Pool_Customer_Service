@@ -17,7 +17,7 @@ price_list = open_price_list()
 def test_create_swimming_pool():
     s = swimming_pool.SwimmingPool("name", [8, 20], price_list, 5)
     assert s.get_name() == "name"
-    assert s.get_work_hour() == [8, 20]
+    assert s.get_work_hours() == [8, 20]
     assert s.get_number_of_seats() == 25
     assert s.get_number_of_tracks() == 5
     assert s.booking_history == {}
@@ -98,9 +98,9 @@ def test_swimming_pool_looking_next_free_seats():
     c = clients.IndividualCustomer("name")
     s.create_history("2022-02-02", 10)
     c.reserved(s, "2022-02-02", 10, 25, "name")
-    assert s.looking_next_free_seats("2022-02-02", 10, 5)[0] == 11
-    assert s.looking_next_free_seats("2022-02-02", 10, 5)[1] == "2022-02-02"
-    assert s.looking_next_free_seats("2022-02-02", 10, 5)[2] == 5
+    assert s.looking_for_free_seats("2022-02-02", 10, 5)[0] == 11
+    assert s.looking_for_free_seats("2022-02-02", 10, 5)[1] == "2022-02-02"
+    assert s.looking_for_free_seats("2022-02-02", 10, 5)[2] == 5
 
 
 def test_swimming_pool_looking_next_free_seats_next_day():
@@ -108,9 +108,9 @@ def test_swimming_pool_looking_next_free_seats_next_day():
     c = clients.IndividualCustomer("name")
     s.create_history("2022-02-02", 19)
     c.reserved(s, "2022-02-02", 19, 25, "name")
-    assert s.looking_next_free_seats("2022-02-02", 19, 5)[0] == 8
-    assert s.looking_next_free_seats("2022-02-02", 19, 5)[1] == "2022-02-03"
-    assert s.looking_next_free_seats("2022-02-02", 19, 5)[2] == 5
+    assert s.looking_for_free_seats("2022-02-02", 19, 5)[0] == 8
+    assert s.looking_for_free_seats("2022-02-02", 19, 5)[1] == "2022-02-03"
+    assert s.looking_for_free_seats("2022-02-02", 19, 5)[2] == 5
 
 
 def test_swimming_pool_looking_next_free_tracks():

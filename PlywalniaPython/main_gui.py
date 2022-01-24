@@ -139,7 +139,7 @@ class ReserveClientDialog(QDialog):
             text7 = "No free seats on a given date\n"
             self.ui.View.setText(text + text7)
             # looking for next possible date
-            hour, date, number = self._sp.looking_free_seats(
+            hour, date, number = self._sp.looking_for_free_seats(
                 enter_date, enter_hour, enter_number)
             text8 = f"Earliest next date: {date} at {hour}"
             self.ui.View.setText(text7 + text8)

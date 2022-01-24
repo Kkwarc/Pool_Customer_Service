@@ -95,7 +95,7 @@ class SwimmingPool:
             return None, number
         return True, number
 
-    def looking_free_seats(self, date, hour, number_of_seats):
+    def looking_for_free_seats(self, date, hour, number_of_seats):
         """
         Search for the closest date on which the given number of seats is available.
         """
@@ -106,7 +106,7 @@ class SwimmingPool:
                 hour, date = self.next_day(date)
                 self.create_history(date, hour)
                 hour, date, number_of_seats = \
-                    self.looking_free_seats(
+                    self.looking_for_free_seats(
                         date, hour, number_of_seats)
             free_seats = self.get_free_seats(date, hour)
             if free_seats >= number_of_seats:
@@ -128,29 +128,29 @@ class SwimmingPool:
         if number <= 0:
             return False, number
         is_free_seats, num = self.checking_free_seats(date, hour, PERSONPERTRACK*number)
-        if not is_free_seats:
+        if not is_free_seats or is_free_seats is None:
             return None, number
         if number < free_tracks:
             return True, number
         return None, number
 
-    def looking_free_tracks(self, date, hour, number_of_tracks):
+    def looking_for_free_tracks(self, date, hour, number_of_tracks):
         """
         Search for the closest date on which the given number of tracks is available.
         """
         work_hours = self.get_work_hours()
         while True:
             free_tracks = self.get_free_tracks(date, hour)
-            condition = self.checking_swimming_schools_condition(
-                number_of_tracks, date, hour)
+            condition, number_of_tracks = self.checking_free_tracks(
+                date, hour, number_of_tracks)
             if hour >= work_hours[1]:
                 hour, date = self.next_day(date)
                 hour, date, number_of_tracks = \
                     self.looking_for_free_tracks(
                         date, hour, number_of_tracks)
             free_tracks = self.get_free_tracks(date, hour)
-            condition = self.checking_swimming_schools_condition(
-                number_of_tracks, date, hour)
+            condition, number_of_tracks = self.checking_free_tracks(
+                date, hour, number_of_tracks)
             if free_tracks >= number_of_tracks and condition:
                 return hour, date, number_of_tracks
             elif hour >= work_hours[0]:
