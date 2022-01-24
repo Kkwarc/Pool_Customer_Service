@@ -13,6 +13,6 @@ text += f'{" ":10}->Financial raport\n'
 text += "File:\n"
 text += f'{" ":10}->Load to file\n'
 text += f'{" ":10}->Save to file\n'
-text += "Start screen\n"
+text += "Start screen:\n"
 text += f'{" "*10}->Show start screen\n'
 TEXT = text
